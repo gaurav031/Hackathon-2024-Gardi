@@ -1,0 +1,11 @@
+#logo{
+    margin-right: 420px;
+}
+.button{
+    color: aliceblue;
+    background-color: red;
+    margin-left: 35px;
+    text-align: center;
+    height: 40px;
+    width: 105px;
+}

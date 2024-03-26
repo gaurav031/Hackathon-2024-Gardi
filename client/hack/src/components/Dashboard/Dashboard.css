@@ -1,0 +1,13 @@
+.login{
+    width: 200px;
+    height: 60px;
+    background-color: red;
+    text-align: center;
+    padding-top: 14px;
+    margin-top: 55px;
+}
+.login span{
+    color: white;
+    font-weight: bold;
+
+}
