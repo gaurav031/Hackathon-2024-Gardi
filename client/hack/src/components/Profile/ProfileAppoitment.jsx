@@ -1,8 +1,9 @@
-import { useDispatch } from "react-redux";
 import "../../App.css";
 import { useNavigate } from "react-router-dom";
+import { loginActions } from "../../store/loginStore";
+import { useDispatch } from "react-redux";
 
-const Profile = () => {
+const ProfileAppoitment = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const handleOnclick = () => {
@@ -21,7 +22,7 @@ const Profile = () => {
                     src="https://bootdey.com/img/Content/avatar/avatar7.png"
                     alt="Admin"
                     className="rounded-circle"
-                    width={150}
+                    width="150"
                   />
                   <div className="mt-3">
                     <h4>Gaurav Kumar</h4>
@@ -38,22 +39,16 @@ const Profile = () => {
             <div className="card mt-3">
               <ul className="list-group list-group-flush">
                 <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                  <h6 className="mb-0 ml-30">Medicine Detail </h6>
+                  <h6 className="mb-0 ml-30">Medicine Detail</h6>
                 </li>
                 <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                   <h6 className="mb-0 ml-30">Doctor Detail</h6>
                 </li>
                 <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                  <h6
-                    className="mb-0 ml-30"
-                    onClick={() => navigate("/profileAppoinment")}
-                  >
-                    Your Appointment
-                  </h6>
+                  <h6 className="mb-0 ml-30">Your Appointment</h6>
                 </li>
                 <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                   <a>
-                    {" "}
                     <h6 className="mb-0 ml-30">
                       <button
                         className="btn btn-primary"
@@ -72,47 +67,71 @@ const Profile = () => {
               <div className="card-body">
                 <div className="row">
                   <div className="col-sm-3">
-                    <h6 className="mb-0">Full Name</h6>
+                    <h6 className="mb-0">Hospital Name</h6>
+                  </div>
+                  <div className="col-sm-9 text-secondary">MKM Hospital</div>
+                </div>
+                <hr />
+                <div className="row">
+                  <div className="col-sm-3">
+                    <h6 className="mb-0">Doctor Name</h6>
+                  </div>
+                  <div className="col-sm-9 text-secondary">
+                    Dr. Mantu Kumar Morya
+                  </div>
+                </div>
+                <hr />
+                <div className="row">
+                  <div className="col-sm-3">
+                    <h6 className="mb-0">Patient name</h6>
                   </div>
                   <div className="col-sm-9 text-secondary">Gaurav Kumar</div>
                 </div>
                 <hr />
                 <div className="row">
                   <div className="col-sm-3">
-                    <h6 className="mb-0">Email</h6>
+                    <h6 className="mb-0">Price</h6>
                   </div>
-                  <div className="col-sm-9 text-secondary">gk@gmail.com</div>
+                  <div className="col-sm-9 text-secondary">1200 &#8377;</div>
                 </div>
                 <hr />
                 <div className="row">
                   <div className="col-sm-3">
-                    <h6 className="mb-0">Phone</h6>
+                    <h6 className="mb-0">Mode Of payment</h6>
                   </div>
-                  <div className="col-sm-9 text-secondary">9145278892</div>
+                  <div className="col-sm-9 text-secondary">Online</div>
                 </div>
                 <hr />
                 <div className="row">
                   <div className="col-sm-3">
-                    <h6 className="mb-0">Mobile</h6>
+                    <h6 className="mb-0">Time of Appointment</h6>
                   </div>
-                  <div className="col-sm-9 text-secondary">897653733</div>
+                  <div className="col-sm-9 text-secondary">
+                    Monday 12 Feb 2024 At 5 PM
+                  </div>
                 </div>
                 <hr />
                 <div className="row">
                   <div className="col-sm-3">
-                    <h6 className="mb-0">Address</h6>
+                    <h6 className="mb-0">Appointment Type</h6>
                   </div>
-                  <div className="col-sm-9 text-secondary">Rajkot,Gujrat</div>
+                  <div className="col-sm-9 text-secondary">
+                    <label htmlFor="physical">Physical</label>
+                    <input type="radio" name="appointmentType" id="physical" />
+                    <label htmlFor="video">Video</label>
+                    <input type="radio" name="appointmentType" id="video" />
+                  </div>
                 </div>
                 <hr />
                 <div className="row">
                   <div className="col-sm-12">
                     <a
-                      className="btn btn-info "
+                      className="btn btn-danger"
                       target="__blank"
-                      href="profile.html"
+                      href="./92201703001_Python Data Structures.pdf"
+                      download
                     >
-                      Edit
+                      Download Invoice
                     </a>
                   </div>
                 </div>
@@ -125,4 +144,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default ProfileAppoitment;
