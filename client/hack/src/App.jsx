@@ -10,6 +10,8 @@ import Login from "./components/Login/Login";
 import Service from "./components/Service/Service";
 import Profile from "./components/Profile/Profile";
 import Dashboard from "./components/Dashboard/Dashboard";
+import Book from "./components/Book/Book";
+import Pay from "./components/Pay/Pay";
 
 function App() {
   return (
@@ -20,7 +22,9 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Dashboard />} />
         <Route path="Services" element={<Service/>}/>
-        <Route path="profile" element={<Profile/>}/>
+        <Route path="/book" element={<Book/>}/>
+        <Route path="/pay" element={<Pay/>}/>
+        <Route path="/profile" element={<Profile/>}/>
       </Routes>
       <Footer />
     </>

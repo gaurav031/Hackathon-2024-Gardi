@@ -17,6 +17,7 @@ import d9 from '../../img/d9.jpeg';
 import d10 from '../../img/d10.jpeg';
 import d11 from '../../img/d11.jpeg';
 import d12 from '../../img/d12.jpeg';
+import { NavLink } from "react-router-dom";
 
 function Home() {
   return (
@@ -34,6 +35,12 @@ function Home() {
             </p>
           </div>
           <div className="welcome-hero-serch-box">
+          <button
+                className="welcome-hero-btn"
+                onclick="window.location.href='#'"
+              >
+                Filter 
+              </button>
             <div className="welcome-hero-form">
               <div className="single-welcome-hero-form">
                 <h3>Hospital</h3>
@@ -61,12 +68,7 @@ function Home() {
               >
                 search <i data-feather="search" />
               </button>
-              <button
-                className="welcome-hero-btn"
-                onclick="window.location.href='#'"
-              >
-                Filter <i data-feather="search" />
-              </button>
+             
             </div>
           </div>
         </div>
@@ -171,13 +173,13 @@ function Home() {
                     <div className="explore-open-close-part">
                       <div className="row">
                         <div className="col-sm-5">
-                          <a href="booking.html">
+                         <NavLink to={'/book'}>
                             <button className="close-btn btn-danger">
                               <span style={{ color: "white",}}>
                                 Book Appointment
                               </span>
                             </button>
-                          </a>
+                            </NavLink>
                         </div>
                         <div className="col-sm-7">
                           <div className="explore-map-icon">
@@ -231,14 +233,13 @@ function Home() {
                     <div className="explore-open-close-part">
                       <div className="row">
                         <div className="col-sm-5">
-                          <button
-                            className="close-btn btn-danger"
-                            href="booking.html"
-                          >
-                            <span style={{ color: "white" }}>
-                              Book Appointment
-                            </span>
-                          </button>{" "}
+                        <NavLink to={'/book'}>
+                            <button className="close-btn btn-danger">
+                              <span style={{ color: "white",}}>
+                                Book Appointment
+                              </span>
+                            </button>
+                            </NavLink>
                         </div>
                         <div className="col-sm-7">
                           <div className="explore-map-icon">
