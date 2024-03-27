@@ -1,8 +1,12 @@
 import "./Hadder.css";
 import { NavLink } from "react-router-dom";
-import logo from '../../img/logo.png'
+import logo from "../../img/logo.png";
+import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
 
 const Hadder = () => {
+  const { userLogin } = useSelector((store) => store.login);
+  console.log(userLogin);
   return (
     <div>
       <header className="header-area">
@@ -26,7 +30,7 @@ const Hadder = () => {
                     >
                       <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className="collapse navbar-collapse"  id="home">
+                    <div className="collapse navbar-collapse" id="home">
                       <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
                           <NavLink className="nav-link" to="/">
@@ -48,8 +52,15 @@ const Hadder = () => {
                             Contact
                           </NavLink>
                         </li>
+
+                        {userLogin && (
+                          <li className="nav-item">
+                            <NavLink className="nav-link" to="/profile">
+                              Profile
+                            </NavLink>
+                          </li>
+                        )}
                       </ul>
-                     
                     </div>
                   </nav>
                 </div>

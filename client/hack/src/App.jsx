@@ -30,7 +30,7 @@ function App() {
         <Route path="/pay" element={<Pay/>}/>
         <Route path="/profile" element={<Profile/>}/>
         <Route path="/card" element={<Card />} />
-        <Route path="/appoinment" element={<Appoinment />} />
+        <Route path="/appointment" element={<Appoinment />} />
         <Route path="/chatpage" element={<Chatpage />} />
         <Route path="/filter" element={<ParentComponent />} />
       </Routes>

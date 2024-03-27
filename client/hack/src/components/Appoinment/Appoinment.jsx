@@ -1,7 +1,14 @@
-
+import { useNavigate } from 'react-router-dom';
 import '../../App.css';
-
-const Appoinment = () => {
+import { useDispatch } from 'react-redux';
+import { loginActions } from '../../store/loginStore';
+const Appointment = () => {
+  const navigate=useNavigate();
+  const dispatch = useDispatch();
+  const handleOnclick = () => {
+    navigate("/");
+    dispatch(loginActions.logout());
+  };
   return (
     <div className="container">
       <div className="main-body">
@@ -19,10 +26,8 @@ const Appoinment = () => {
                   <div className="mt-3">
                     <h4>Gaurav Kumar</h4>
                     <p className="text-secondary mb-1">Eye Patient</p>
-                    <a >
-                      <button className="btn btn-primary">
-                        Your Health Card
-                      </button>
+                    <a href="/health-card">
+                      <button className="btn btn-primary">Your Health Card</button>
                     </a>
                   </div>
                 </div>
@@ -31,20 +36,16 @@ const Appoinment = () => {
             <div className="card mt-3">
               <ul className="list-group list-group-flush">
                 <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                  <h6 className="mb-0 ml-30">Medicine Detail</h6>
+                  <h6 className="mb-0 ml-3">Medicine Detail</h6>
                 </li>
                 <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                  <h6 className="mb-0 ml-30">Doctor Detail</h6>
+                  <h6 className="mb-0 ml-3" onClick={()=>navigate("/profile")}>Patient Detail Detail</h6>
                 </li>
                 <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                  <h6 className="mb-0 ml-30">Your Appointment</h6>
+                  <h6 className="mb-0 ml-3">Your Appointment</h6>
                 </li>
                 <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                  <a>
-                    <h6 className="mb-0 ml-30">
-                      <button className="btn btn-primary">Log out</button>
-                    </h6>
-                  </a>
+                  <h6 className="mb-0 ml-3" onClick={handleOnclick}>Log out</h6>
                 </li>
               </ul>
             </div>
@@ -79,7 +80,7 @@ const Appoinment = () => {
                   <div className="col-sm-3">
                     <h6 className="mb-0">Price</h6>
                   </div>
-                  <div className="col-sm-9 text-secondary">1200 &#8377;</div>
+                  <div className="col-sm-9 text-secondary">1200 ₹</div>
                 </div>
                 <hr />
                 <div className="row">
@@ -114,8 +115,7 @@ const Appoinment = () => {
                   <div className="col-sm-12">
                     <a
                       className="btn btn-danger"
-                      target="__blank"
-                      href="./92201703001_Python Data Structures.pdf"
+                      href="./92201703001_Python_Data_Structures.pdf"
                       download
                     >
                       Download Invoice
@@ -131,4 +131,4 @@ const Appoinment = () => {
   );
 };
 
-export default Appoinment;
+export default Appointment;
