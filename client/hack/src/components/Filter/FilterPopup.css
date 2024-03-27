@@ -1,0 +1,59 @@
+/* FilterPopup.css */
+#main{
+  margin-left: -30px;
+  margin-top: 170px;
+}
+.filter-container {
+
+  top: 50%;
+  left: 10%; /* Adjust the left percentage as needed */
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+.filter-popup {
+  max-width: 400px;
+}
+
+.filter-section {
+  margin-bottom: 20px;
+}
+
+.filter-section h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.filter-section label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.filter-section input[type="text"],
+.filter-section input[type="range"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.filter-section button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filter-section button:hover {
+  background-color: #0056b3;
+}
+
+/* Additional CSS for cost progress bar */
+.cost-progress-bar {
+  margin-top: 20px; /* Adjust as needed */
+}

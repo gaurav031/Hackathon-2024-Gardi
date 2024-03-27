@@ -1,0 +1,12 @@
+#myviedo{
+    width: 220px;
+    height: 40px;
+    background-color: blue;
+    border-radius: 100px;
+    color: rgb(246, 245, 245);
+    text-align: center;
+    padding-top: 8px;
+}
+#myviedo:hover{
+   background-color: red;
+}

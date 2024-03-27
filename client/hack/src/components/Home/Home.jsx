@@ -1,25 +1,27 @@
 import React from "react";
 import "../../App.css";
 import "./Home.css";
-import img from '../../img/hospital.jpg'
-import img1 from '../../img/breadcumb1.jpg'
-import img2 from '../../img/breadcumb3.jpg'
-import img3 from '../../img/lab.avif'
-import d1 from '../../img/d1.jpeg';
-import d2 from '../../img/d2.jpeg';
-import d3 from '../../img/d3.jpeg';
-import d4 from '../../img/d4.jpeg';
-import d5 from '../../img/d5.jpeg';
-import d6 from '../../img/d6.jpeg';
-import d7 from '../../img/d7.jpeg';
-import d8 from '../../img/d8.jpeg';
-import d9 from '../../img/d9.jpeg';
-import d10 from '../../img/d10.jpeg';
-import d11 from '../../img/d11.jpeg';
-import d12 from '../../img/d12.jpeg';
-import { NavLink } from "react-router-dom";
+import img from "../../img/hospital.jpg";
+import img1 from "../../img/breadcumb1.jpg";
+import img2 from "../../img/breadcumb3.jpg";
+import img3 from "../../img/lab.avif";
+import d1 from "../../img/d1.jpeg";
+import d2 from "../../img/d2.jpeg";
+import d3 from "../../img/d3.jpeg";
+import d4 from "../../img/d4.jpeg";
+import d5 from "../../img/d5.jpeg";
+import d6 from "../../img/d6.jpeg";
+import d7 from "../../img/d7.jpeg";
+import d8 from "../../img/d8.jpeg";
+import d9 from "../../img/d9.jpeg";
+import d10 from "../../img/d10.jpeg";
+import d11 from "../../img/d11.jpeg";
+import d12 from "../../img/d12.jpeg";
+import { NavLink, useNavigate } from "react-router-dom";
+import ParentComponent from "../Filter/ParentComponent";
 
 function Home() {
+ const navigate = useNavigate();
   return (
     <>
       <section id="home" className="welcome-hero">
@@ -35,12 +37,7 @@ function Home() {
             </p>
           </div>
           <div className="welcome-hero-serch-box">
-          <button
-                className="welcome-hero-btn"
-                onclick="window.location.href='#'"
-              >
-                Filter 
-              </button>
+            <ParentComponent />
             <div className="welcome-hero-form">
               <div className="single-welcome-hero-form">
                 <h3>Hospital</h3>
@@ -56,9 +53,7 @@ function Home() {
                 <form action="home.html">
                   <input type="text" placeholder="search the city" />
                 </form>
-                <div className="welcome-hero-form-icon">
-                  <i className="fa fa-map-pin" />
-                </div>
+              
               </div>
             </div>
             <div className="welcome-hero-serch">
@@ -68,7 +63,6 @@ function Home() {
               >
                 search <i data-feather="search" />
               </button>
-             
             </div>
           </div>
         </div>
@@ -173,13 +167,13 @@ function Home() {
                     <div className="explore-open-close-part">
                       <div className="row">
                         <div className="col-sm-5">
-                         <NavLink to={'/book'}>
+                          <NavLink to={"/book"}>
                             <button className="close-btn btn-danger">
-                              <span style={{ color: "white",}}>
+                              <span style={{ color: "white" }}>
                                 Book Appointment
                               </span>
                             </button>
-                            </NavLink>
+                          </NavLink>
                         </div>
                         <div className="col-sm-7">
                           <div className="explore-map-icon">
@@ -233,13 +227,13 @@ function Home() {
                     <div className="explore-open-close-part">
                       <div className="row">
                         <div className="col-sm-5">
-                        <NavLink to={'/book'}>
+                          <NavLink to={"/book"}>
                             <button className="close-btn btn-danger">
-                              <span style={{ color: "white",}}>
+                              <span style={{ color: "white" }}>
                                 Book Appointment
                               </span>
                             </button>
-                            </NavLink>
+                          </NavLink>
                         </div>
                         <div className="col-sm-7">
                           <div className="explore-map-icon">
@@ -257,7 +251,7 @@ function Home() {
               <div className=" col-md-4 col-sm-6">
                 <div className="single-explore-item">
                   <div className="single-explore-img">
-                    <img src={d3}alt="explore image" />
+                    <img src={d3} alt="explore image" />
                     <div className="single-explore-img-info">
                       <button onclick="window.location.href='#'">
                         best rated

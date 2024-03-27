@@ -12,6 +12,10 @@ import Profile from "./components/Profile/Profile";
 import Dashboard from "./components/Dashboard/Dashboard";
 import Book from "./components/Book/Book";
 import Pay from "./components/Pay/Pay";
+import Card from "./components/Card/Card";
+import Appoinment from "./components/Appoinment/Appoinment"
+import Chatpage from "./components/Chatpage/Chatpage";
+import ParentComponent from "./components/Filter/ParentComponent";
 
 function App() {
   return (
@@ -25,6 +29,10 @@ function App() {
         <Route path="/book" element={<Book/>}/>
         <Route path="/pay" element={<Pay/>}/>
         <Route path="/profile" element={<Profile/>}/>
+        <Route path="/card" element={<Card />} />
+        <Route path="/appoinment" element={<Appoinment />} />
+        <Route path="/chatpage" element={<Chatpage />} />
+        <Route path="/filter" element={<ParentComponent />} />
       </Routes>
       <Footer />
     </>

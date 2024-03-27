@@ -4,3 +4,81 @@
 .close-btn {
     background-color: red;
 }
+/* DoctorFilterPage.css */
+
+.doctor-filter-page {
+    font-family: 'Arial', sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .filter-section {
+    margin-bottom: 20px;
+  }
+  
+  .filter-section h2 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+  
+  .filter-checkbox-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .checkbox-item {
+    margin-bottom: 5px;
+  }
+  
+  .checkbox-item label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    font-size: 1rem;
+  }
+  
+  .checkbox-item input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .checkbox-item input[type="checkbox"]:checked ~ .checkmark:after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid #00a8cc;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  .filtered-results {
+    margin-top: 20px;
+  }
+  
+  .filtered-results h2 {
+    font-size: 1.2rem;
+  }

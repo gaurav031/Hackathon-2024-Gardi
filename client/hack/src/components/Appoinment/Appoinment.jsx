@@ -1,4 +1,4 @@
-import "./Profile.css";
+
 import '../../App.css';
 
 const Appoinment = () => {
@@ -19,7 +19,7 @@ const Appoinment = () => {
                   <div className="mt-3">
                     <h4>Gaurav Kumar</h4>
                     <p className="text-secondary mb-1">Eye Patient</p>
-                    <a href="card.html">
+                    <a >
                       <button className="btn btn-primary">
                         Your Health Card
                       </button>
@@ -40,7 +40,7 @@ const Appoinment = () => {
                   <h6 className="mb-0 ml-30">Your Appointment</h6>
                 </li>
                 <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                  <a href="index.html">
+                  <a>
                     <h6 className="mb-0 ml-30">
                       <button className="btn btn-primary">Log out</button>
                     </h6>
