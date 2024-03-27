@@ -34,7 +34,7 @@ const Profile = () => {
                   <div className="mt-3">
                     <h4>Gaurav Kumar</h4>
                     <p className="text-secondary mb-1">Eye Patient</p>
-                    <NavLink to="/health-card" className="nav-link">
+                    <NavLink to="/card" className="nav-link">
                       <button className="btn btn-primary">Your Health Card</button>
                     </NavLink>
                   </div>
