@@ -3,11 +3,6 @@ import "../../App.css";
 import hero from '../../img/hero1.avif';
 import { NavLink } from "react-router-dom";
 import "./Dashboard.css";
-
-
-
-
-
 function Dashboard() {
   return (
     <>

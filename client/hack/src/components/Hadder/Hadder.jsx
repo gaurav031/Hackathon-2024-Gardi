@@ -17,7 +17,7 @@ const Hadder = () => {
                 <div className="main-menu h-100">
                   <nav className="navbar h-100 navbar-expand-lg">
                     <NavLink className="navbar-brand" id="logo" to="/">
-                      <img src={logo} alt="Logo" />
+                      <span>CareLinkHub</span>
                     </NavLink>
                     <button
                       className="navbar-toggler"
